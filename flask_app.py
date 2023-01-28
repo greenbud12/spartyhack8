@@ -2,15 +2,21 @@ from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
 
 from openai_request_script import send_request
+from twilio_script import twii
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    question = "This is a test"
-    # response = send_request(question)
+    # Create a twilio class
+    twi = twii()
 
+    question = "what is 1+2"
+    # response = send_request(question)
     response = "OpenAI currently off"
+
+    # send msg to phone
+    # twi.send_msg(response)
 
     return response
 
