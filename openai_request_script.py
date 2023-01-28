@@ -2,14 +2,14 @@ import os
 import requests
 import json
 
-def send_request():
+def send_request(text_message):
     # Define the API endpoint and your API key
     api_endpoint = "https://api.openai.com/v1/engines/text-davinci-002/completions"
     api_key = os.environ["OPENAI_API_KEY"]
 
     # Define the input parameters for the API request
     data = {
-        "prompt": "What is 5+7?",
+        "prompt": text_message,
         "temperature": 0.5,
         "max_tokens": 128,
     }

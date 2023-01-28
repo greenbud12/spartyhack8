@@ -1,11 +1,18 @@
 from flask import Flask, request, redirect
 from twilio.twiml.messaging_response import MessagingResponse
 
+from openai_request_script import send_request
+
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Web App with Python Flask!'
+    question = "This is a test"
+    # response = send_request(question)
+
+    response = "OpenAI currently off"
+
+    return response
 
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
