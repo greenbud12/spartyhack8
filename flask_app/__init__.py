@@ -1,8 +1,6 @@
 # Author: Prof. MM Ghassemi <ghassem3@msu.edu>
+# Reviewer: Bailey Bakerson <bakerso1@msu.edu>
 
-#--------------------------------------------------
-# Import Requirements
-#--------------------------------------------------
 import os
 from flask import Flask
 from flask_failsafe import failsafe
