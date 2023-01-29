@@ -1,3 +1,5 @@
+# Author: Bailey Bakerson <bakerso1@msu.edu>
+
 from flask import current_app as app
 from flask import Flask, request, redirect
 

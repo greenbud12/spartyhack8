@@ -1,3 +1,5 @@
+# Author: Bailey Bakerson <bakerso1@msu.edu>
+
 import os
 import requests
 import json

@@ -1,4 +1,4 @@
-# Download the helper library from https://www.twilio.com/docs/python/install
+# Author: Bailey Bakerson <bakerso1@msu.edu>
 import os
 from twilio.rest import Client
 
