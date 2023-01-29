@@ -8,22 +8,13 @@ from . twilio_script import twii
 
 @app.route('/')
 def index():
-    # Create a twilio class
-    twi = twii()
-
-    question = "what is 1+2"
-    # response = send_request(question)
-    response = "OpenAI currently off"
-
-    # send msg to phone
-    # twi.send_msg(response)
-
     return f"""<html>
-	           <h1>It's alive!</h1>
-	           <p>The response: {response}</p>
+	           <h1 style="text-align: center; color: Black;">
+               Welcome to TextGPT</h1>
+	           <p style="text-align: center; color: Black;">
+               Simply text (269)399-4156</p>
 	           </html>
 	        """
-	
 
 @app.route("/sms/call", methods=['GET', 'POST'])
 def sms_reply():
@@ -56,8 +47,8 @@ def incoming_sms():
         resp.message("Goodbye")
     elif b2 == 'help' or b2 == 'h':
         resp.message("I am a chatbot that can answer any of your questions.\
-             You could ask about the weather, color of an apple, or how to plant\
-                a tomato seedling. Your creativity is the limit.")
+ You could ask about the weather, color of an apple, or how to plant\
+ a tomato seedling. Your creativity is the limit.")
     else:
         # Add a message
         msg = resp.message(send_request(body))
