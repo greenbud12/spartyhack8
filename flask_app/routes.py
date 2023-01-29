@@ -12,11 +12,11 @@ def index():
     twi = twii()
 
     question = "what is 1+2"
-    response = send_request(question)
-    # response = "OpenAI currently off"
+    # response = send_request(question)
+    response = "OpenAI currently off"
 
     # send msg to phone
-    twi.send_msg(response)
+    # twi.send_msg(response)
 
     return f"""<html>
 	           <h1>It's alive!</h1>
