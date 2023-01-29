@@ -11,7 +11,8 @@ class twii:
 
   def __init__(self) -> None:
     self.account_sid = "AC0137bd72aca87c825774d2e95707b694"
-    self.auth_token = os.environ["TWILIO_AUTH_TOKEN"]
+    # self.auth_token = os.environ["TWILIO_AUTH_TOKEN"]
+    
     self.client = Client(self.account_sid, self.auth_token)
 
 
