@@ -27,7 +27,7 @@ def sms_reply():
     resp = MessagingResponse()
 
     # Add a message
-    resp.message("The Robots are coming! Head for the hills!")
+    resp.message("We plan to support voice to text in the future!")
 
     return str(resp)
 
@@ -38,15 +38,17 @@ def incoming_sms():
     body = request.values.get('Body', None)
 
     # Start our TwiML response
-    resp = MessagingResponse()
+    # resp = MessagingResponse()
+    twi = twii()
 
     # Determine the right reply for this message
-    if body == 'hello':
-        resp.message("Hi!")
-    elif body == 'bye':
-        resp.message("Goodbye")
+    # if body == 'hello':
+    #     resp.message("Hi!")
+    # elif body == 'bye':
+    #     resp.message("Goodbye")
+    twi.send_msg("sup ass")
 
-    return str(resp)
+    return str(twi)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=81, debug=True)
